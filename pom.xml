@@ -65,4 +65,26 @@
         </pluginRepository>
     </pluginRepositories>
 
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Default spring profile to use -->
+                <spring.profiles.active>dev</spring.profiles.active>
+                <!-- Default environment -->
+                <environment>develop</environment>
+            </properties>
+        </profile>
+        <profile>
+            <id>prod</id>
+            <properties>
+                <spring.profiles.active>prod</spring.profiles.active>
+                <environment>production</environment>
+            </properties>
+        </profile>
+
+    </profiles>
 </project>
